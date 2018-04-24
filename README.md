@@ -76,3 +76,9 @@
     - write tests
     - play with SQL till it works and copy that code
 - Do a pass with Rubocop and Reek to find really bad code that I'll be ashamed to admit I've even written
+
+
+## Refactor
+
+- terrible CSS
+- links to javascripts and stylesheets
