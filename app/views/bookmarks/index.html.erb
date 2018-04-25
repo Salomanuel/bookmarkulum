@@ -3,9 +3,19 @@
 
 <p>Viva!</p>
 
-<ul>
-  <% @bookmarks.each do |bookmark| %>
-    <li><%= bookmark.title %></li>
-  <% end %>
-</ul>
-
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookmarks.each do |bookmark| %>
+    <tr>
+        <td><%= bookmark.title %></td>
+        <td><%= bookmark.site.top_level_url %></td>
+    </tr>
+    <% end %> 
+  </tbody>
+</table>
