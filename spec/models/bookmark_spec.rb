@@ -4,7 +4,8 @@ require "spec_helper"
 
 RSpec.describe Bookmark, :type => :model do
   before(:each) do
-    @bookmark = Site.new.bookmarks.new(
+    @site = Site.create
+    @bookmark = @site.bookmarks.create(
       title: "test bookmark",
       url:   "https://www.reddit.com/r/tightpussy/",
       shortening: "https://www.short.com/tp")
@@ -22,7 +23,7 @@ RSpec.describe Bookmark, :type => :model do
     end
 
     it "a top level site" do
-      skip("fix the belonging syntax with rspec")
+      skip("fix the belonging synta with rspec")
       @bookmark.site_id = nil
       expect(@bookmark).not_to be_valid
     end
@@ -38,8 +39,11 @@ RSpec.describe Bookmark, :type => :model do
     end
 
     it "a belonging to a Site" do
-      skip("fix the belonging syntax with rspec")
-      expect(@bookmark).to belong_to(:site)
+      # skip
+      # site = Site.new
+      # @bookmark.site << site
+      ("fix the belonging syntax with rspec")
+      expect(@bookmark.site).to be_instance_of(Site)
     end
   end
 end
