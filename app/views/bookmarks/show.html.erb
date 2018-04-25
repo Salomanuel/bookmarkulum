@@ -1,1 +1,10 @@
-<h1>this is show</h1>
+<h1><%= @bookmark.title %></h1>
+
+<h3>url</h3>
+<%= @bookmark.url %>
+
+<h3>shortening</h3>
+<%= @bookmark.shortening %>
+
+<h3>belonging site</h3>
+<%= @bookmark.site.top_level_url %>
