@@ -5,7 +5,7 @@ require "spec_helper"
 RSpec.describe Bookmark, :type => :model do
   before(:each) do
     @site = Site.create
-    @bookmark = @site.bookmarks.create(
+    @bookmark = @site.bookmarks.new(
       title: "test bookmark",
       url:   "https://www.reddit.com/r/tightpussy/",
       shortening: "https://www.short.com/tp")
@@ -23,7 +23,7 @@ RSpec.describe Bookmark, :type => :model do
     end
 
     it "a top level site" do
-      skip("fix the belonging synta with rspec")
+      ("fix the belonging synta with rspec")
       @bookmark.site_id = nil
       expect(@bookmark).not_to be_valid
     end
