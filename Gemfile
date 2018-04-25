@@ -36,6 +36,7 @@ gem 'bootstrap-sass' # for the nice bootstrap assets
 
 # to have some Pokemons (for seeding the DataBase)
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'bitly' # for the URL shortener
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

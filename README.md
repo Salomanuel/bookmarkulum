@@ -85,3 +85,5 @@
 
 - db/seeds.rb DELETES every Site and every Bookmark every time you seed. 
 It's very useful in developing, but be careful with that in production
+
+- put the BITLY_API_KEY in an ENV variable, somehow
