@@ -3,6 +3,21 @@
 
 <p>Viva!</p>
 
+<h2>Create New Bookmark</h2>
+<%= form_for @bookmark do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :url %>
+  <%= form.text_field :url %>
+
+  <%= form.label :shortening %>
+  <%= form.text_field :shortening %>
+
+  <%= form.submit %>
+<% end %>
+
+<h2>All Bookmarks"</h2>
 <table>
   <thead>
     <tr>
@@ -13,7 +28,7 @@
   <tbody>
     <% @bookmarks.each do |bookmark| %>
     <tr>
-        <td><%= bookmark.title %></td>
+        <td><%= link_to bookmark.title, bookmark %></td>
         <td><%= bookmark.site.top_level_url %></td>
     </tr>
     <% end %> 
