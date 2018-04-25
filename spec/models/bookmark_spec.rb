@@ -5,10 +5,13 @@ require "spec_helper"
 RSpec.describe Bookmark, :type => :model do
   before(:each) do
     @site = Site.create
-    @bookmark = @site.bookmarks.create(
-      title: "test bookmark",
-      url:   "https://www.reddit.com/r/tightpussy/",
-      shortening: "https://www.short.com/tp")
+
+    @bookmark = FactoryBot.create(:bookmark, site_id: @site.id)
+
+    # @bookmark = @site.bookmarks.create(
+    #   title: "test bookmark",
+    #   url:   "https://www.reddit.com/r/tightpussy/",
+    #   shortening: "https://www.short.com/tp")
   end
 
   context "must validate" do
