@@ -7,4 +7,11 @@ class Bookmark < ApplicationRecord
   # validates :url,         presence: true
   # validates :shortening,  presence: true
 
+
+  private
+    # returns a shortened url from a long url
+    def shortener(url)
+      Bitly.client.shorten(url).short_url
+    end
+
 end

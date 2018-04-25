@@ -83,7 +83,11 @@
 - terrible CSS
 - links to javascripts and stylesheets
 
-- db/seeds.rb DELETES every Site and every Bookmark every time you seed. 
-It's very useful in developing, but be careful with that in production
+## To Do
 
+- db/seeds.rb DELETES every Site and every Bookmark every time you seed. 
+It's very useful in developing, but be careful with that in productionj
 - put the BITLY_API_KEY in an ENV variable, somehow
+- add errors messages when #shortener fails 
+    - when the site does not exists
+- validate URL syntax
