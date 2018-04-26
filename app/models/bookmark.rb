@@ -1,4 +1,5 @@
 class Bookmark < ApplicationRecord
+  include BookmarksHelper
   # belongs_to :site
 
   validates_presence_of :title, :url, :shortening#, :site_id
@@ -7,6 +8,7 @@ class Bookmark < ApplicationRecord
   # validates :url,         presence: true
   # validates :shortening,  presence: true
 
+# site_exists?(host) is implemented in bookmarks_helper
   
   private
       # parses the URL and returns the host website
