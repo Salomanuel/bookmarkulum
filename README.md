@@ -91,3 +91,5 @@ It's very useful in developing, but be careful with that in production
 - make navigations link work
 
 - implement an engine to shorten URLs without using third party APIs nor Gems
+
+- I have removed from bookmarks/index and bookmarks/show <%= @bookmark.site.top_level_url %>

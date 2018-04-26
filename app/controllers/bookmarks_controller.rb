@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save 
       redirect_to @bookmark
     else
-      render 'index'
+      render inline: "<p><%= @bookmark.errors.messages %></p>"
     end
   end
 
@@ -20,7 +20,7 @@ class BookmarksController < ApplicationController
 
   private
 
-    def bookmark_params(params)
+    def bookmark_params
       params.require(:bookmark).permit(
         :title, :url, :shortening)
     end
