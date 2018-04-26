@@ -4,20 +4,9 @@
 <p>Viva!</p>
 
 <h2>Create New Bookmark</h2>
-<%= form_for @bookmark do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
+<%= render partial: 'form' %>
 
-  <%= form.label :url %>
-  <%= form.text_field :url %>
-
-  <%= form.label :shortening %>
-  <%= form.text_field :shortening %>
-
-  <%= form.submit %>
-<% end %>
-
-<h2>All Bookmarks"</h2>
+<h2>All Bookmarks</h2>
 <table>
   <thead>
     <tr>
