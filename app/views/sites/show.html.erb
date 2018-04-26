@@ -1,0 +1,19 @@
+<h1><%= @site.top_level_url %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Site</th>
+      <th>URL</th>
+      <th>Shortening</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @site.bookmarks.each do |bookmark| %>
+    <tr>
+      <td><%= link_to bookmark.title, bookmark %></td>
+      <td><%= link_to nil, bookmark.url %></td>
+      <td><%= link_to nil, bookmark.shortening %></td>
+    </tr>
+    <% end %> 
+  </tbody>
+</table>

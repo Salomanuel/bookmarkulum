@@ -10,9 +10,9 @@ Bookmark::delete_all
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-10.times do
-  Site.create(top_level_url: "www.#{Faker::Pokemon.name.downcase}.com")
-end
+# 10.times do
+#   Site.create(top_level_url: "www.#{Faker::Pokemon.name.downcase}.com")
+# end
 
 50.times do
   pokemon = Faker::Pokemon.name
