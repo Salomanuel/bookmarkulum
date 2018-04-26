@@ -11,15 +11,15 @@ Bookmark::delete_all
 require 'faker'
 
 10.times do
-  Site.create(top_level_url: "www.#{Faker::Pokemon.name}.com")
+  Site.create(top_level_url: "www.#{Faker::Pokemon.name.downcase}.com")
 end
 
 50.times do
   pokemon = Faker::Pokemon.name
   Bookmark.create(
     title:      "#{pokemon}'s page",
-    url:        "www.#{pokemon}.com/#{pokemon}",
-    shortening: "www.short.com/#{pokemon}",
+    url:        "http://www.#{pokemon.downcase}.com/#{pokemon.downcase}",
+    shortening: "http://www.short.com/#{pokemon}",
     site_id:    rand(0..(Site.all.count))
     )
 end
