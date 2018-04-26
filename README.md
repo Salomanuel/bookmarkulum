@@ -81,18 +81,31 @@
 ## Refactor
 
 - terrible CSS
-- links to javascripts and stylesheets
 
 - db/seeds.rb DELETES every Site and every Bookmark every time you seed. 
 It's very useful in developing, but be careful with that in production
 
 ## To Do
 
-- make navigations link work
-- implement an engine to shorten URLs without using third party APIs nor Gems
-- I have removed from bookmarks/index and bookmarks/show <%= @bookmark.site.top_level_url %>
+### css
 - add active page with css in the navigation menu
-- test the URL parser
+- make navigations link work
+- links to javascripts and stylesheets should be the railsy way
+
+### models
 - top_site_domain should be parsed 
     - capsdown
     - trim www and other things
+
+### views
+- add pagination
+
+
+### tests
+- test the URL parser
+    - URLs need the http protocol, it cold be added while saving the bookmark
+
+### ideas
+- implement an engine to shorten URLs without using third party APIs nor Gems
+
+

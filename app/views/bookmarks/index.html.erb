@@ -18,7 +18,7 @@
     <% @bookmarks.each do |bookmark| %>
     <tr>
         <td><%= link_to bookmark.title, bookmark %></td>
-        <td></td>
+        <td><%= bookmark.site.top_level_url %></td>
     </tr>
     <% end %> 
   </tbody>
