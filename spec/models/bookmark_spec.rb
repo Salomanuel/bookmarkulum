@@ -7,7 +7,7 @@ RSpec.describe Bookmark, :type => :model do
     @site = Site.create
     @bookmark = @site.bookmarks.new(
       title: "test bookmark",
-      url:   "https://www.reddit.com/r/tightpussy/",
+      url:   "https://www.reddit.com/r/tightpussy/", # it's about cats in tight spaces
       shortening: "https://www.short.com/tp")
   end
 
