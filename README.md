@@ -85,3 +85,9 @@
 
 - db/seeds.rb DELETES every Site and every Bookmark every time you seed. 
 It's very useful in developing, but be careful with that in production
+
+## To Do
+
+- make navigations link work
+
+- implement an engine to shorten URLs without using third party APIs nor Gems
