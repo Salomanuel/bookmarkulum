@@ -47,7 +47,7 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  width: 1000px;
 }
 
 
@@ -99,7 +99,7 @@ body {
  */
 .cover {
   padding: 0 1.5rem;
-  padding-top: 100px;
+  padding-top: 30px;
   text-align: left;
 }
 .cover .btn-lg {
@@ -113,4 +113,11 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+/*
+  * Pagination
+  */
+.pagination {
+  margin: 5px;
 }
