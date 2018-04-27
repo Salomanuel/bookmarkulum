@@ -89,7 +89,6 @@ It's very useful in developing, but be careful with that in production
 
 ### css
 - add active page with css in the navigation menu
-- make navigations link work
 - links to javascripts and stylesheets should be the railsy way
 
 ### models
@@ -98,7 +97,6 @@ It's very useful in developing, but be careful with that in production
     - trim www and other things
 
 ### views
-- add pagination
 
 
 ### tests
