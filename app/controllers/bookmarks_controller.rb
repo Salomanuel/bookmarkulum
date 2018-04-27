@@ -9,7 +9,8 @@ class BookmarksController < ApplicationController
     if @bookmark.save 
       redirect_to @bookmark
     else
-      render inline: "<p><%= @bookmark.errors.messages %></p>"
+      render 'static_pages/home'
+      # render inline: "<p><%= @bookmark.errors.messages %></p>"
     end
   end
 
