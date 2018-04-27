@@ -13,12 +13,13 @@
         <tr>
           <td><%= link_to bookmark.title, bookmark %></td>
           <td><%= link_to bookmark.site.top_level_url, bookmark.site %></td>
-          <td><%= link_to "edit", edit_bookmark_path(bookmark) %></td>
-          <td>
-            <%= form_for(bookmark) do |f| %>
-              <%= f.submit "delete" %>
-            <% end %>
-          <td><%= link_to "delete", bookmark, method: :delete, data: { confirm: "You sure?" } %></td>
+          <td><%= link_to "edit", edit_bookmark_path(bookmark),
+                class: "btn btn-outline-secondary" %>
+          </td>
+          <td><%= link_to "delete", bookmark, 
+                method: :delete, 
+                data: { confirm: "You sure?" },
+                class: "btn btn-outline-danger" %></td>
           </td>
         </tr>
         <% end %> 
