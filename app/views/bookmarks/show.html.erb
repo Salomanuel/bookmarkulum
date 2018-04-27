@@ -1,10 +1,1 @@
-<h1><%= @bookmark.title %></h1>
-
-<h3>url</h3>
-<%= link_to nil, @bookmark.url %>
-
-<h3>shortening</h3>
-<%= link_to nil, @bookmark.shortening %>
-
-<h3>belonging site</h3>
-<%= link_to @bookmark.site.top_level_url, @bookmark.site %>
+<%= render "bookmark_show" %>
