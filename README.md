@@ -104,6 +104,7 @@ It's very useful in developing, but be careful with that in production
 ### tests
 - test the URL parser
     - URLs need the http protocol, it cold be added while saving the bookmark
+- test #destroy_sites_with_no_bookmarks
 
 ### ideas
 - implement an engine to shorten URLs without using third party APIs nor Gems
