@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'bootstrap-will_paginate', '1.0.0' # for pagination
 gem 'bootstrap-sass' # for the nice bootstrap assets
 
 # to have some Pokemons (for seeding the DataBase)
