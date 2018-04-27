@@ -108,3 +108,11 @@ It's very useful in developing, but be careful with that in production
 - implement an engine to shorten URLs without using third party APIs nor Gems
 
 
+### Problems
+
+- It works, but I don't know how to test it.
+    A `Bookmark` `belongs_to` a `Site`, that's in the validations as well.  
+    But in order to have a `Site`, `#create_or_assign_site` has to be run before the validations.  
+    So, I have to find a way to validate first the `url`, process it (so it can have a `Site`) and only then run the validations for `belongs_to :site`
+
+
