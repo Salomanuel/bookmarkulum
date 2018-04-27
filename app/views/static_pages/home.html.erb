@@ -1,8 +1,21 @@
 <main role="main" class="inner cover">
 
   <div class="col-md-6">
-    <h2>New Bookmark</h2>
-    <%= render partial: 'bookmarks/form' %>
+    <div class="row">
+      <h3>Search for a Bookmark</h3>
+      
+      <%= form_tag("/static_pages/search", method: "get") do %>
+      <div class="row col-md-6">
+        <%= text_field_tag(:bookmark_title) %>
+      </div>
+      <%= submit_tag("search") %>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <h3>New Bookmark</h3>
+      <%= render partial: 'bookmarks/form' %>
+    </div>
   </div>
 
 
