@@ -16,7 +16,21 @@ class BookmarksController < ApplicationController
   def show
     @bookmark = Bookmark.find(params[:id])
   end
+  
+  def edit
+    @bookmark = Bookmark.find(params[:id])
+  end
 
+  def update
+    @bookmark = Bookmark.find(params[:id])
+    if @bookmark.update_attributes(bookmark_params)
+      redirect_to @bookmark
+      # all is good
+    else
+      render inline: "<p><%= @bookmark.errors.messages %></p>"
+    end
+  end
+ 
 
   private
 
