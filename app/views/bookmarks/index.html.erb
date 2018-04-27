@@ -11,14 +11,15 @@
       <tbody>
         <% @bookmarks.each do |bookmark| %>
         <tr>
-            <td><%= link_to bookmark.title, bookmark %></td>
-            <td><%= link_to bookmark.site.top_level_url, bookmark.site %></td>
-            <td><%= link_to "edit", edit_bookmark_path(bookmark) %></td>
-            <td>
+          <td><%= link_to bookmark.title, bookmark %></td>
+          <td><%= link_to bookmark.site.top_level_url, bookmark.site %></td>
+          <td><%= link_to "edit", edit_bookmark_path(bookmark) %></td>
+          <td>
             <%= form_for(bookmark) do |f| %>
               <%= f.submit "delete" %>
             <% end %>
-            </td>
+          <td><%= link_to "delete", bookmark, method: :delete, data: { confirm: "You sure?" } %></td>
+          </td>
         </tr>
         <% end %> 
       </tbody>

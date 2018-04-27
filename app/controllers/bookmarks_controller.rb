@@ -24,12 +24,18 @@ class BookmarksController < ApplicationController
   def update
     @bookmark = Bookmark.find(params[:id])
     if @bookmark.update_attributes(bookmark_params)
-      redirect_to @bookmark
-      # all is good
+      redirect_to @bookmark # all is good
     else
       render inline: "<p><%= @bookmark.errors.messages %></p>"
     end
   end
+
+  def destroy
+    Bookmark.find(params[:id]).destroy
+    redirect_to bookmarks_url
+  end
+
+
  
 
   private
