@@ -1,20 +1,26 @@
-<h2>Create New Bookmark</h2>
-<%= render partial: 'form' %>
+<div class="col-md-6">
+  <h2>New Bookmark</h2>
+  <%= render partial: 'form' %>
+</div>
 
-<h2>All Bookmarks</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Site</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @bookmarks.each do |bookmark| %>
-    <tr>
-        <td><%= link_to bookmark.title, bookmark %></td>
-        <td><%= link_to bookmark.site.top_level_url, bookmark.site %></td>
-    </tr>
-    <% end %> 
-  </tbody>
-</table>
+<div class="col-md-6">
+  <h2>All Bookmarks</h2>
+  <%= will_paginate %>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Site</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bookmarks.each do |bookmark| %>
+        <tr>
+            <td><%= link_to bookmark.title, bookmark %></td>
+            <td><%= link_to bookmark.site.top_level_url, bookmark.site %></td>
+        </tr>
+        <% end %> 
+      </tbody>
+    </table>
+  <%= will_paginate %>
+</div>
