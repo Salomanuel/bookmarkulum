@@ -115,4 +115,22 @@ It's very useful in developing, but be careful with that in production
     But in order to have a `Site`, `#create_or_assign_site` has to be run before the validations.  
     So, I have to find a way to validate first the `url`, process it (so it can have a `Site`) and only then run the validations for `belongs_to :site`
 
+## Time Management
+
+in hours
+
+1   generate simple app with a simple controller and add and set bootstrap    
+1   generate, migrate Bookmark and Site models   
+2   css   
+2   deal with Bookmarks controller and create and set all the pages    
+1   seed the database with Pokemons    
+2   set up the URL parser   
+1   deal with Bookmark model   
+1   Site controller   
+0.5 will_paginate   
+1   search   
+1   forms   
+3   write tests (I lost a lot of time because I friend tried to explain me why I HAD to use FactoryBot)
+
+
 
