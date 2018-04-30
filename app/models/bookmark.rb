@@ -1,13 +1,11 @@
 class Bookmark < ApplicationRecord
   include BookmarksHelper
   before_validation :create_or_assign_site
+  after_destroy     :destroy_sites_with_no_bookmarks
   belongs_to :site
 
   validates_presence_of :title, :url, :shortening#, :site_id
-  
-  # validates :title,       presence: true
-  # validates :url,         presence: true
-  # validates :shortening,  presence: true
+  validates :url, :url => true
 
 
   
@@ -29,5 +27,13 @@ class Bookmark < ApplicationRecord
     # parses the URL and returns the host website
     def get_host_from(url)
       return URI.parse(url).host
+    end
+    
+    # destroys Sites that have no Bookmarks
+    # could be made faster with an SQL query that checks which Sites don't have Bookmarks
+    def destroy_sites_with_no_bookmarks
+      Site.all.each do |site|
+        site.destroy if site.bookmarks.empty?
+      end
     end
 end

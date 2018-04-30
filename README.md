@@ -89,7 +89,6 @@ It's very useful in developing, but be careful with that in production
 
 ### css
 - add active page with css in the navigation menu
-- make navigations link work
 - links to javascripts and stylesheets should be the railsy way
 
 ### models
@@ -98,14 +97,22 @@ It's very useful in developing, but be careful with that in production
     - trim www and other things
 
 ### views
-- add pagination
 
 
 ### tests
 - test the URL parser
     - URLs need the http protocol, it cold be added while saving the bookmark
+- test #destroy_sites_with_no_bookmarks
 
 ### ideas
 - implement an engine to shorten URLs without using third party APIs nor Gems
+
+
+### Problems
+
+- It works, but I don't know how to test it.
+    A `Bookmark` `belongs_to` a `Site`, that's in the validations as well.  
+    But in order to have a `Site`, `#create_or_assign_site` has to be run before the validations.  
+    So, I have to find a way to validate first the `url`, process it (so it can have a `Site`) and only then run the validations for `belongs_to :site`
 
 

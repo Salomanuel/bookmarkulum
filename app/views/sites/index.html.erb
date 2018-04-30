@@ -1,15 +1,19 @@
 <h2>All Sites</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Site</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @sites.each do |site| %>
-    <tr>
-      <td><%= link_to site.top_level_url, site %></td>
-    </tr>
-    <% end %> 
-  </tbody>
-</table>
+<%= will_paginate %>
+  <table>
+    <thead>
+      <tr>
+        <th>Site</th>
+        <th>Bookmarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @sites.each do |site| %>
+      <tr>
+        <td><%= link_to site.top_level_url, site %></td>
+        <td><%= site.bookmarks.count %></td>
+      </tr>
+      <% end %> 
+    </tbody>
+  </table>
+<%= will_paginate %>

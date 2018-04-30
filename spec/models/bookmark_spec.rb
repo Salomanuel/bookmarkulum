@@ -7,7 +7,7 @@ RSpec.describe Bookmark, :type => :model do
     @site = Site.create
     @bookmark = @site.bookmarks.new(
       title: "test bookmark",
-      url:   "https://www.reddit.com/r/tightpussy/", # it's about cats in tight spaces
+      url:   "http://www.reddit.com/r/tightpussy/", # it's about cats in tight spaces
       shortening: "https://www.short.com/tp")
   end
 
@@ -30,7 +30,7 @@ RSpec.describe Bookmark, :type => :model do
     end
 
     it "an URL" do
-      skip
+      skip ("see Readme/Problems")
       @bookmark.url = nil
       expect(@bookmark).not_to be_valid
     end
@@ -44,7 +44,7 @@ RSpec.describe Bookmark, :type => :model do
       # skip
       # site = Site.new
       # @bookmark.site << site
-      ("fix the belonging syntax with rspec")
+      # ("fix the belonging syntax with rspec")
       expect(@bookmark.site).to be_instance_of(Site)
     end
   end

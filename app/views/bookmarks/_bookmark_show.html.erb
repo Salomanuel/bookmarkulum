@@ -1,0 +1,14 @@
+<% if @bookmark.nil? %>
+  <h3>no results, please try a different search query</h3>
+<% else %>
+  <h1><%= @bookmark.title %></h1>
+
+  <h3>url</h3>
+  <%= link_to nil, @bookmark.url %>
+
+  <h3>shortening</h3>
+  <%= link_to nil, @bookmark.shortening %>
+
+  <h3>belonging site</h3>
+  <%= link_to @bookmark.site.top_level_url, @bookmark.site %>
+<% end %>
