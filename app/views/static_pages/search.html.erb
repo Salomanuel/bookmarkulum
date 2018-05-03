@@ -1,1 +1,8 @@
-<%= render partial: "bookmarks/bookmark_show" %>
+<%#= render partial: "bookmarks/bookmark_show" %>
+<h1>hey</h1>
+<%= render partial: 'bookmarks/index' %>
+<% @bookmarks.each do |bookmark| %>
+  <li><%= bookmark.title %></li>
+<% end %>
+
+<%= @bookmarks.count %>
