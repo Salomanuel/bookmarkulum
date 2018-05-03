@@ -4,7 +4,7 @@
     <div class="row">
       <h3>Search for a Bookmark</h3>
       
-      <%= form_tag("/static_pages/search", method: "get") do %>
+      <%= form_tag("/bookmarks/search", method: "get") do %>
       <div class="row col-md-6">
         <%= text_field_tag(:bookmark_title) %>
       </div>

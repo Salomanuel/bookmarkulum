@@ -36,13 +36,21 @@ class BookmarksController < ApplicationController
     redirect_to bookmarks_url
   end
 
-
- 
+  def search
+    @bookmarks = find_bookmarks(params).paginate(page: params[:page])
+  end
+  
 
   private
 
     def bookmark_params
       params.require(:bookmark).permit(
         :title, :url, :shortening)
+    end
+
+        # more fuzzy search, returns many results
+    def find_bookmarks(params)
+      title = params[:bookmark_title]
+      Bookmark.where("title LIKE '%#{title}%'")
     end
 end
